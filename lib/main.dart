@@ -39,6 +39,10 @@ class Home extends StatelessWidget {
           ],
           elevation: 0.0,
           bottom: TabBar(
+            unselectedLabelColor: Colors.black38,
+            indicatorColor: Colors.black54,
+            indicatorSize: TabBarIndicatorSize.label,
+            indicatorWeight: 1.0,
             tabs: [
               Tab(icon: Icon(Icons.local_florist)),
               Tab(icon: Icon(Icons.change_history)),
