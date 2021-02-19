@@ -70,11 +70,15 @@ class Home extends StatelessWidget {
           child: ListView(
             padding: EdgeInsets.zero,
             children: [
-              DrawerHeader(
-                child: Text('head'.toUpperCase()),
-                decoration: BoxDecoration(
-                  color: Colors.grey[100],
+              UserAccountsDrawerHeader(
+                accountName: Text(
+                  'Flutter Demo',
+                  style: TextStyle(fontWeight: FontWeight.bold),
                 ),
+                accountEmail: Text('xxxx@flutterdemo.com'),
+                currentAccountPicture: CircleAvatar(
+                    backgroundImage: NetworkImage(
+                        'https://pic.pimg.tw/hanzhiyu/1605433233-1520719975-g_m.jpg')),
               ),
               ListTile(
                 title: Text(
