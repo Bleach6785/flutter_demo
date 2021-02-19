@@ -26,11 +26,6 @@ class Home extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.grey[100],
         appBar: AppBar(
-          leading: IconButton(
-            icon: Icon(Icons.menu),
-            tooltip: 'Navigation',
-            onPressed: () => debugPrint('Navigation button is pressed.'),
-          ),
           title: Text('Flutter Demo'),
           actions: [
             IconButton(
@@ -91,6 +86,7 @@ class Home extends StatelessWidget {
                   color: Colors.black12,
                   size: 22.0,
                 ),
+                onTap: () => Navigator.pop(context),
               ),
               ListTile(
                 title: Text(
@@ -102,6 +98,7 @@ class Home extends StatelessWidget {
                   color: Colors.black12,
                   size: 22.0,
                 ),
+                onTap: () => Navigator.pop(context),
               ),
               ListTile(
                 title: Text(
@@ -113,6 +110,7 @@ class Home extends StatelessWidget {
                   color: Colors.black12,
                   size: 22.0,
                 ),
+                onTap: () => Navigator.pop(context),
               ),
             ],
           ),
