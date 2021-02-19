@@ -71,6 +71,16 @@ class Home extends StatelessWidget {
             ),
           ],
         ),
+        drawer: Container(
+          color: Colors.white,
+          padding: EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('This is drawer'),
+            ],
+          ),
+        ),
       ),
     );
   }
