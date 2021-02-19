@@ -77,8 +77,20 @@ class Home extends StatelessWidget {
                 ),
                 accountEmail: Text('xxxx@flutterdemo.com'),
                 currentAccountPicture: CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        'https://pic.pimg.tw/hanzhiyu/1605433233-1520719975-g_m.jpg')),
+                  backgroundImage: NetworkImage(
+                      'https://pic.pimg.tw/hanzhiyu/1605433233-1520719975-g_m.jpg'),
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.yellow[400],
+                  image: DecorationImage(
+                      image: NetworkImage(
+                          'http://n.sinaimg.cn/sinacn10122/233/w2048h1385/20190629/02bd-hyzpvis3933101.jpg'),
+                      fit: BoxFit.cover,
+                      colorFilter: ColorFilter.mode(
+                        Colors.yellow[400].withOpacity(0.6),
+                        BlendMode.hardLight,
+                      )),
+                ),
               ),
               ListTile(
                 title: Text(
