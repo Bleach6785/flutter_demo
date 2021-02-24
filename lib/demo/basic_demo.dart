@@ -25,6 +25,11 @@ class BasicDemo extends StatelessWidget {
                 width: 3.0,
                 style: BorderStyle.solid,
               ),
+              // borderRadius: BorderRadius.circular(16.0),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(64.0),
+                bottomLeft: Radius.circular(64.0),
+              ),
             ),
           ),
         ],
