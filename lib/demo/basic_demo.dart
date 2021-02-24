@@ -38,6 +38,7 @@ class BasicDemo extends StatelessWidget {
                   spreadRadius: -9.0,
                 ),
               ],
+              shape: BoxShape.rectangle,
             ),
           ),
         ],
