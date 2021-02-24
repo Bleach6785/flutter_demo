@@ -25,7 +25,6 @@ class BasicDemo extends StatelessWidget {
                 width: 3.0,
                 style: BorderStyle.solid,
               ),
-              borderRadius: BorderRadius.circular(16.0),
               // borderRadius: BorderRadius.only(
               //   topLeft: Radius.circular(64.0),
               //   bottomLeft: Radius.circular(64.0),
@@ -38,7 +37,21 @@ class BasicDemo extends StatelessWidget {
                   spreadRadius: -9.0,
                 ),
               ],
-              shape: BoxShape.rectangle,
+              shape: BoxShape.circle,
+              // gradient: RadialGradient(
+              //   colors: [
+              //     Color.fromRGBO(7, 102, 255, 1.0),
+              //     Color.fromRGBO(3, 28, 128, 1.0),
+              //   ],
+              // ),
+              gradient: LinearGradient(
+                colors: [
+                  Color.fromRGBO(7, 102, 255, 1.0),
+                  Color.fromRGBO(3, 28, 128, 1.0),
+                ],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ),
             ),
           ),
         ],
