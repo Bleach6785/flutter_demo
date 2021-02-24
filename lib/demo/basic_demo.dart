@@ -4,7 +4,21 @@ class BasicDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey[100],
+      // color: Colors.grey[100],
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: NetworkImage(
+            'https://upload.wikimedia.org/wikipedia/zh/4/4a/TWICE%28%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4%29_Signal_%28EP%29.jpg',
+          ),
+          alignment: Alignment.topCenter,
+          // repeat: ImageRepeat.repeatY,
+          fit: BoxFit.cover,
+          colorFilter: ColorFilter.mode(
+            Colors.indigoAccent[400].withOpacity(.5),
+            BlendMode.hardLight,
+          ),
+        ),
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
