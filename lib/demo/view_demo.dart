@@ -8,6 +8,11 @@ class ViewDemo extends StatelessWidget {
       // reverse: true,
       // scrollDirection: Axis.vertical,
       onPageChanged: (currentPage) => debugPrint('Page:$currentPage'),
+      controller: PageController(
+        initialPage: 1,
+        keepPage: false,
+        viewportFraction: .85, // 佔用比例(依照滾動方向調整)
+      ),
       children: [
         Container(
           color: Colors.brown[900],
