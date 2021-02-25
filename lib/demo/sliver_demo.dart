@@ -11,10 +11,68 @@ class SliverDemo extends StatelessWidget {
           SliverSafeArea(
             sliver: SliverPadding(
               padding: EdgeInsets.all(8.0),
-              sliver: SliverGridDemo(),
+              sliver: SliverListDemo(),
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class SliverListDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SliverList(
+      delegate: SliverChildBuilderDelegate(
+        (BuildContext context, int index) {
+          return Padding(
+            padding: const EdgeInsets.only(
+              bottom: 32.0,
+            ),
+            child: Material(
+              borderRadius: BorderRadius.circular(12.0),
+              clipBehavior: Clip.hardEdge,
+              elevation: 14.0,
+              shadowColor: Colors.grey.withOpacity(.5),
+              child: Stack(
+                children: [
+                  AspectRatio(
+                    aspectRatio: 16 / 9,
+                    child: Image.network(
+                      posts[index].imageUrl,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Positioned(
+                    top: 32.0,
+                    left: 32.0,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          posts[index].name,
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Text(
+                          posts[index].bloodType,
+                          style: TextStyle(
+                            fontSize: 13.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          );
+        },
+        childCount: posts.length,
       ),
     );
   }
