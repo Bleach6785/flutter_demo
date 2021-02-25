@@ -8,6 +8,11 @@ class SliverDemo extends StatelessWidget {
     return Scaffold(
       body: CustomScrollView(
         slivers: [
+          SliverAppBar(
+            title: Text('Flutter Demo'),
+            // pinned: true, // 固定標題內容
+            floating: true, //工具欄滾動
+          ),
           SliverSafeArea(
             sliver: SliverPadding(
               padding: EdgeInsets.all(8.0),
