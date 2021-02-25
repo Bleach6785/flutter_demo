@@ -9,9 +9,24 @@ class SliverDemo extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            title: Text('Flutter Demo'),
+            // title: Text('Flutter Demo'),
             // pinned: true, // 固定標題內容
             floating: true, //工具欄滾動
+            expandedHeight: 178.0, // 伸展的高度
+            flexibleSpace: FlexibleSpaceBar(
+              title: Text(
+                '你好 Flutter Demo'.toUpperCase(),
+                style: TextStyle(
+                  fontSize: 15.0,
+                  letterSpacing: 3.0,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              background: Image.network(
+                'http://n.sinaimg.cn/sinacn10122/233/w2048h1385/20190629/02bd-hyzpvis3933101.jpg',
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
           SliverSafeArea(
             sliver: SliverPadding(
