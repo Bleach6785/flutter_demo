@@ -15,9 +15,11 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: NavigatorDemo(),
+      // home: NavigatorDemo(),
+      initialRoute: '/',
       routes: {
-        "/about": (context) => PageScreen(title: 'About'),
+        '/': (context) => NavigatorDemo(),
+        '/about': (context) => PageScreen(title: 'About'),
       },
       theme: ThemeData(
         primarySwatch: Colors.yellow,
