@@ -6,22 +6,43 @@ class ListViewDemo extends StatelessWidget {
     return Container(
       color: Colors.white,
       margin: EdgeInsets.all(8.0),
-      child: Column(
+      child: Stack(
         children: [
-          Image.network(posts[index].imageUrl),
-          SizedBox(
-            height: 16.0,
+          Column(
+            children: [
+              AspectRatio(
+                  aspectRatio: 16 / 9,
+                  child: Image.network(
+                    posts[index].imageUrl,
+                    fit: BoxFit.cover,
+                  )),
+              SizedBox(
+                height: 16.0,
+              ),
+              Text(
+                posts[index].name,
+                style: Theme.of(context).textTheme.title,
+              ),
+              Text(
+                posts[index].bloodType,
+                style: Theme.of(context).textTheme.subhead,
+              ),
+              SizedBox(
+                height: 16.0,
+              ),
+            ],
           ),
-          Text(
-            posts[index].name,
-            style: Theme.of(context).textTheme.title,
-          ),
-          Text(
-            posts[index].bloodType,
-            style: Theme.of(context).textTheme.subhead,
-          ),
-          SizedBox(
-            height: 16.0,
+          Positioned.fill(
+            child: Material(
+              color: Colors.transparent,
+              child: InkWell(
+                splashColor: Colors.white.withOpacity(.3),
+                highlightColor: Colors.white.withOpacity(.1),
+                onTap: () {
+                  debugPrint('Tap');
+                },
+              ),
+            ),
           ),
         ],
       ),
